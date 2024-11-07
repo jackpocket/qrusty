@@ -40,6 +40,15 @@ defmodule Qrusty.Native do
     image_binary_nif(data, opts)
   end
 
+  def generate_alphanumeric(data, :svg, w, h, ec) do
+    opts = %Options{format: :svg, width: w, height: h, error_correction: ec}
+    svg_alphanumeric(data, opts)
+  end
+
+  def generate_alphanumeric(_data, format, _w, _h, _ec) do
+    raise("#{format} not supported for alphanumeric, please use :svg")
+  end
+
   @doc false
   def svg_nif(_data, _opts), do: :erlang.nif_error(:nif_not_loaded)
 
@@ -48,4 +57,7 @@ defmodule Qrusty.Native do
 
   @doc false
   def image_base64_nif(_data, _opts), do: :erlang.nif_error(:nif_not_loaded)
+
+  @doc false
+  def svg_alphanumeric(_str, _opts), do: :erlang.nif_error(:nif_not_loaded)
 end
