@@ -1,8 +1,8 @@
 defmodule Qrusty.MixProject do
   use Mix.Project
 
-  @version "0.1.6"
-  @source_url "https://github.com/nbw/qrusty"
+  @version "0.1.7"
+  @source_url "https://github.com/jackpocket/qrusty"
 
   def project do
     [
@@ -63,7 +63,7 @@ defmodule Qrusty.MixProject do
         "native/qrusty/target"
       ],
       licenses: ["MIT"],
-      maintainers: ["Nathan Willson"],
+      maintainers: ["Matt Mills"],
       links: %{"GitHub" => @source_url},
       source_url: @source_url
     ]
