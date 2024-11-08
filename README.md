@@ -1,4 +1,6 @@
-# Qrusty
+# Qrusty - JP Fork
+
+This is the JP fork!
 
 QR Code generator that leverages [precompiled Rust](https://github.com/philss/rustler_precompiled).
 
